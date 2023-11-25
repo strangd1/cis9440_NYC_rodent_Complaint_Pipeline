@@ -1,0 +1,29 @@
+{
+  "name": "Extract Restaurant Inspection Template",
+  "description": "Extract DOHMH New York City Restaurant Inspection Results to a destination table on Google BigQuery",
+  "parameters": [
+    {
+      "name": "mode",
+      "label": "Extraction mode",
+      "helpText": "snapshot = refresh all the data / increment = daily increment load",
+      "regexes": [
+        "(snapshot|increment)"
+      ]
+    },
+    {
+      "name": "nyc_opendata_apikey",
+      "label": "NYC Open Data API Key",
+      "helpText": "API key for accessing NYC Open Data"
+    },
+    {
+      "name": "dataset",
+      "label": "BigQuery Dataset name",
+      "helpText": "Google BigQuery destination dataset name"
+    },
+    {
+      "name": "dest_table",
+      "label": "Destination table name",
+      "helpText": "Destination table name on Google BigQuery"
+    }
+  ]
+}
